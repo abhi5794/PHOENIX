@@ -1,0 +1,16 @@
+<html>
+   <body>
+      <form action = "/upload" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" /><br>
+         <input type = "submit"/>
+      </form>
+     <form action = "/predict" method = "GET"
+         enctype = "multipart/form-data">
+         <input type = "submit"/>
+      </form>
+	{% for pred in predict %}
+	<p>{{ pred }}<p>
+	{% endfor %} 		
+   </body>
+</html>
